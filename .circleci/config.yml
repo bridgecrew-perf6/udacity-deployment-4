@@ -6,6 +6,8 @@ jobs:
   build:
     docker:
       - image: "cimg/base:stable"
+    environment:
+      NODE_OPTIONS: "--openssl-legacy-provider"
     steps:
       - node/install
       - checkout
